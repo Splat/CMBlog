@@ -13,9 +13,7 @@ technology in a new application.
 
 
 =======================================================================================================
-
 SETUP
-
 =======================================================================================================
 
 While the end result of CMBlog is an index.html file that can be run without running a server, NodeJS
@@ -53,9 +51,7 @@ install command.
 
 
 =======================================================================================================
-
 TOUR
-
 =======================================================================================================
 
 Checkout the CMBlog repository into your working directory and open up the root folder. The general
@@ -80,9 +76,7 @@ including boilerplate tests for our controllers.
 
 
 =======================================================================================================
-
 PREVIEW
-
 =======================================================================================================
 
 Now that everything is installed, the application is viewable! Just navigate to the index.html file 
@@ -98,11 +92,8 @@ existing data in the dashboard the json shapes are as follows:
 
 
 =======================================================================================================
-
 ABOUT - The objects which fill the abbout page with details regarding the site.
-
 =======================================================================================================
-
 {
 	"__class__": "About",
 	"blurb": " SOME BLURBY TEXT",
@@ -113,12 +104,8 @@ ABOUT - The objects which fill the abbout page with details regarding the site.
 
 
 =======================================================================================================
-
 TODO - The objects which are visible to admin users when logged in.
-
 =======================================================================================================
-
-
 {
 	"description": "Build this thing!",
 	"__class__": "Todo",
@@ -129,12 +116,8 @@ TODO - The objects which are visible to admin users when logged in.
 
 
 =======================================================================================================
-
 POST - The objects which make a blog post
-
 =======================================================================================================
-
-
 {
 	"__class__": "Post",
 	"__created__": "2014-06-19T13:05:22Z",
@@ -147,12 +130,8 @@ POST - The objects which make a blog post
 
 
 =======================================================================================================
-
 APPINFO - The object which tell a little story about the application.
-
 =======================================================================================================
-
-
 {
 	"__class__": "AppInfo",
 	"__created__": "2014-06-19T13:18:10Z",
@@ -164,13 +143,9 @@ APPINFO - The object which tell a little story about the application.
 
 
 =======================================================================================================
-
 ACCESS - The object which tells the application whether a logged in user is an admin or not. This will
 eventually become a list of permissions and have a full permissioning system.
-
 =======================================================================================================
-
-
 {
 	"__class__": "Access",
 	"isAdmin": true
