@@ -1,6 +1,6 @@
+=======================================================================================================
 CMBlog
-======
-
+=======================================================================================================
 CloudMine allows your in-house development resources to focus their attention on creating unique, high 
 value business logic and front-end interfaces. By offering all mobile back-end architecture out of the 
 box, CloudMine's customers have reduced their mobile app development time and cost by 40% - 60%. Once 
@@ -15,7 +15,6 @@ technology in a new application.
 =======================================================================================================
 SETUP
 =======================================================================================================
-
 While the end result of CMBlog is an index.html file that can be run without running a server, NodeJS
 is required for sanity checks running Grunt and Karma. Prerequisites are the following:
 
@@ -53,7 +52,6 @@ install command.
 =======================================================================================================
 TOUR
 =======================================================================================================
-
 Checkout the CMBlog repository into your working directory and open up the root folder. The general
 directory structure of the application is as follows:
 
@@ -78,7 +76,6 @@ including boilerplate tests for our controllers.
 =======================================================================================================
 PREVIEW
 =======================================================================================================
-
 Now that everything is installed, the application is viewable! Just navigate to the index.html file 
 that is contained in the app directory and voila! You should see some garbage data from a sample 
 Cloudmine data store. Applications are initialized with a specific app and api key within the
@@ -90,9 +87,8 @@ into the application send a note and you can be added as an admin for that APPId
 application on the Cloudmine platform and swap in your values. If you would like to stub out some pre-
 existing data in the dashboard the json shapes are as follows:
 
-
 =======================================================================================================
-ABOUT - The objects which fill the abbout page with details regarding the site.
+ABOUT: The objects which fill the abbout page with details regarding the site.
 =======================================================================================================
 {
 	"__class__": "About",
@@ -104,7 +100,7 @@ ABOUT - The objects which fill the abbout page with details regarding the site.
 
 
 =======================================================================================================
-TODO - The objects which are visible to admin users when logged in.
+TODO: The objects which are visible to admin users when logged in.
 =======================================================================================================
 {
 	"description": "Build this thing!",
@@ -116,7 +112,7 @@ TODO - The objects which are visible to admin users when logged in.
 
 
 =======================================================================================================
-POST - The objects which make a blog post
+POST: The objects which make a blog post
 =======================================================================================================
 {
 	"__class__": "Post",
@@ -130,7 +126,7 @@ POST - The objects which make a blog post
 
 
 =======================================================================================================
-APPINFO - The object which tell a little story about the application.
+APPINFO: The object which tell a little story about the application.
 =======================================================================================================
 {
 	"__class__": "AppInfo",
@@ -143,7 +139,7 @@ APPINFO - The object which tell a little story about the application.
 
 
 =======================================================================================================
-ACCESS - The object which tells the application whether a logged in user is an admin or not. This will
+ACCESS: The object which tells the application whether a logged in user is an admin or not. This will
 eventually become a list of permissions and have a full permissioning system.
 =======================================================================================================
 {
