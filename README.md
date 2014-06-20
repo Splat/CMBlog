@@ -139,8 +139,7 @@ APPINFO: The object which tell a little story about the application.
 
 
 =======================================================================================================
-ACCESS: The object which tells the application whether a logged in user is an admin or not. This will
-eventually become a list of permissions and have a full permissioning system.
+ACCESS: The object which tells the application whether a logged in user is an admin or not. This will eventually become a list of permissions and have a full permissioning system.
 =======================================================================================================
 {
 	"__class__": "Access",
