@@ -88,7 +88,7 @@ application on the Cloudmine platform and swap in your values. If you would like
 existing data in the dashboard the json shapes are as follows:
 
 =======================================================================================================
-ABOUT: The objects which fill the abbout page with details regarding the site.
+ABOUT: The objects which fill the about page with details regarding the site.
 =======================================================================================================
 {
 	"__class__": "About",
