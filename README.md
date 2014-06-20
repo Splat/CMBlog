@@ -46,16 +46,16 @@ Checkout the CMBlog repository into your working directory and open up the root 
 directory structure of the application is as follows:
 
 1. app: a parent directory for our web application
-* cloudmine.js: the current platform js library connector. see => https://cloudmine.me/docs/js
-* index.html: the base html file for our Angular app
-* 404.html, favicon.ico, and robots.txt: every site needs them!
-* bower_components: a home for our JavaScript/web dependencies, installed by Bower
-* scripts: our own JS files
-** app.js: our main Angular application code
-** controllers: our Angular controllers which are used to drive the views which they are bound to
-** services: here is the service classes that act as adapters to the middleware Cloudmine library
-* styles: the current CSS theming
-* views: all the html which gets injected by angular to the one page site
+  * cloudmine.js: the current platform js library connector. see => https://cloudmine.me/docs/js
+  * index.html: the base html file for our Angular app
+  * 404.html, favicon.ico, and robots.txt: every site needs them!
+  * bower_components: a home for our JavaScript/web dependencies, installed by Bower
+  * scripts: our own JS files
+    * app.js: our main Angular application code
+    * controllers: our Angular controllers which are used to drive the views which they are bound to
+    * services: here is the service classes that act as adapters to the middleware Cloudmine library
+  * styles: the current CSS theming
+  * views: all the html which gets injected by angular to the one page site
 2. Gruntfile.js, package.json, and node_modules: configuration and dependencies required by our Grunt tasks
 3. test and karma.conf.js/karma-e2e.conf.js: a scaffolded out test runner and the unit tests for the project, 
 including boilerplate tests for our controllers.
