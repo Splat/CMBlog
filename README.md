@@ -90,6 +90,8 @@ existing data in the dashboard the json shapes are as follows:
 =======================================================================================================
 ABOUT: The objects which fill the about page with details regarding the site.
 =======================================================================================================
+
+'''
 {
 	"__class__": "About",
 	"blurb": " SOME BLURBY TEXT",
@@ -97,6 +99,7 @@ ABOUT: The objects which fill the about page with details regarding the site.
 	"__updated__": "2014-06-19T12:28:22Z",
 	"__order__": 1 // the order in which it will display on the page
 }
+'''
 
 
 =======================================================================================================
