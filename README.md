@@ -101,10 +101,10 @@ ABOUT: The objects which fill the about page with details regarding the site.
 }
 ```
 
-
 =======================================================================================================
 TODO: The objects which are visible to admin users when logged in.
 =======================================================================================================
+```
 {
 	"description": "Build this thing!",
 	"__class__": "Todo",
@@ -112,11 +112,12 @@ TODO: The objects which are visible to admin users when logged in.
 	"__id__": "2b53a5543e27a44d73d9bd893727b1a5",
 	"__updated__": "2014-06-18T16:11:20Z"
 }
-
+```
 
 =======================================================================================================
 POST: The objects which make a blog post
 =======================================================================================================
+```
 {
 	"__class__": "Post",
 	"__created__": "2014-06-19T13:05:22Z",
@@ -126,11 +127,12 @@ POST: The objects which make a blog post
 	"abstract": "A short description.",
 	"fullText": "A long description. ADDING THIS SENTENCE TO MAKE MORE CHARS THAN ABSTRACT."
 }
-
+```
 
 =======================================================================================================
 APPINFO: The object which tell a little story about the application.
 =======================================================================================================
+```
 {
 	"__class__": "AppInfo",
 	"__created__": "2014-06-19T13:18:10Z",
@@ -139,14 +141,16 @@ APPINFO: The object which tell a little story about the application.
 	"author": "SOME PERSON",
 	"description": "SOME FACTS"
 }
-
+```
 
 =======================================================================================================
 ACCESS: The object which tells the application whether a logged in user is an admin or not. This will eventually become a list of permissions and have a full permissioning system.
 =======================================================================================================
+```
 {
 	"__class__": "Access",
 	"isAdmin": true
 }
+```
 
 
