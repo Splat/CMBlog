@@ -15,16 +15,14 @@ angular.module('cmBlogApp')
 //        if ($rootScope.currentUser)
 //            logout();
 
-    $scope.error = false;
+    $scope.loginError = false;
     $scope.login = function () {
-      console.log($scope.username, $scope.password);
-      console.log("login user called");
       cloudmineAuthService.login({
         username: $scope.username,
         password: $scope.password
       }, function (err) {
         if (err)
-          $scope.error = true;
+          $scope.loginError = true;
       });
     };
 
@@ -38,12 +36,11 @@ angular.module('cmBlogApp')
      * https://ryan.cloudmineapp.com/password_reset.html?reset_token={{token}}&appid={{app_id}}
      */
     $scope.resetPassword = function () {
-      console.log("reset password called " + $scope.email);
       // set the error to false in case the request is a success
-      $scope.error = false;
+      $scope.resetError = false;
       cloudmineAuthService.resetPassword($scope.email, function (err) {
         if (err)
-          $scope.error = true;
+          $scope.resetError = true;
       });
     };
 
@@ -55,11 +52,12 @@ angular.module('cmBlogApp')
      * TODO: add checking to ensure that two password fields are equivalent and show and error if not
      */
     $scope.confirmReset = function () {
+      // token read from query parameters
       if ($location.search().reset_token) {
-        $scope.error = false;
+        $scope.setError = false;
         cloudmineAuthService.confirmRest($location.search().reset_token, $scope.newPassword, function (err) {
           if (err) {
-            $scope.error = true;
+            $scope.setError = true;
           } else {
             scope.$apply(function () {
               $location.path("/login");
@@ -67,7 +65,7 @@ angular.module('cmBlogApp')
           }
         });
       } else {
-        $scope.error = true;
+        $scope.setError = true;
       }
     };
 
