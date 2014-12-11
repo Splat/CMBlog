@@ -179,6 +179,15 @@ angular.module('cmBlogApp')
         });
       },
 
+      /**
+       * @param token - passed through and initially read from query string or as
+       * a component of the URL specified in the custom password reset URL field
+       * in the application dashboard.
+       * @param newPassword - the new password to be mapped with the user associated
+       * with the token.
+       * @param callback - null on success or the error message forwarded from the
+       * api call in the cloudine service
+       */
       confirmReset: function (token, newPassword, callback) {
         if (!opts.inited)
           throw "Must initialize CloudmineAuthService first!";
