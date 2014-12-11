@@ -12,7 +12,7 @@ angular.module('cmBlogApp')
         var appOpts = {
             appname: "Ryan",
             appversion: "1.0",
-            savelogin: false,
+            savelogin: true,
             appid: "8a9bb54cdcf94163bafd7df89d3c9981", // master
             apikey: "86dc9a944f374924af91978740916ce2", // prod
             //apikey: "1ece004dd1c84e5cb2ccf96b303921cd" // stage
@@ -36,9 +36,6 @@ angular.module('cmBlogApp')
             requestQueue[queryHash] = deferred.promise;
 
             this.search(query, {sort: ["type:desc", "__created__"], limit: -1, applevel: true}, function (err, objects) {
-                // ensure the session_token isn't empty from a logout... if so then re-instantiate
-//                if (!this.cmWebService || !this.cmWebService.session_token)
-//                    cmWebService = new cloudmine.WebService(appOpts);
                 // dequeue request
                 delete requestQueue[queryHash];
                 // in case of error send back the local cached store passed in
@@ -59,7 +56,7 @@ angular.module('cmBlogApp')
             return deferred.promise;
         };
 
-        this.updateItem = function (_item, store, config) {
+        this.updateItem = function (_item, store, config, isAppLevel) {
             config = config || {};
             /*
             This flag is very important. appLevel dictates whether or not the
@@ -70,7 +67,7 @@ angular.module('cmBlogApp')
             objects you want all users to have access to (ie. configs, announcements,
             etc.).
              */
-            config.applevel = true;
+            config.applevel = isAppLevel || true; // default to true if not provided
             // get rid of $$hashKey placed by angular for items coming from a $scope
             var item = angular.fromJson(angular.toJson(_item));
             console.log("updating item", item);

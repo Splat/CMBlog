@@ -1,6 +1,7 @@
 <div class="container" ng-controller="LoginCtrl">
     <div class="content drop">
         <div class="row">
+            <div class="panel-heading">Login</div>
             <div class="login-form well span4 offset4">
                 <form action="" ng-submit="login()">
                     <fieldset>
@@ -10,11 +11,38 @@
                         <div class="clearfix">
                             <input type="password" ng-model="password" placeholder="Password">
                         </div>
+                        <br>
                         <button class="btn btn-primary" type="submit">Sign in</button>
                     </fieldset>
                 </form>
-                <div class="alert alert-error" ng-show="error">Invalid credentials, please log in again.</div>
+                <div class="alert alert-error" ng-show="loginError">Invalid credentials, please log in again.</div>
             </div>
+            <div class="panel-heading">Reset Password</div>
+            <div class="login-form well span4 offset4">
+                <form action="" ng-submit="resetPassword()">
+                    <fieldset>
+                        <div class="clearfix">
+                            <input type="text" ng-model="email" placeholder="Email Address">
+                        </div>
+                        <br>
+                        <button class="btn btn-primary" type="submit">Reset Password</button>
+                    </fieldset>
+                </form>
+                <div class="alert alert-error" ng-show="resetError">Email address not found.</div>
+            </div>
+        </div>
+        <div class="panel-heading">Set Password</div>
+        <div class="login-form well span4 offset4">
+            <form action="" ng-submit="confirmReset()">
+                <fieldset>
+                    <div class="clearfix">
+                        <input type="text" ng-model="newPassword" placeholder="New Password">
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" type="submit">Set Password</button>
+                </fieldset>
+            </form>
+            <div class="alert alert-error" ng-show="setError">Setting new password failed.</div>
         </div>
     </div>
 </div>
